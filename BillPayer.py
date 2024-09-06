@@ -10,4 +10,3 @@ friends = ['John', 'Peter', 'Paul', 'Mary', 'Jane']
 print(friends[randomiser] + " is the bill payer") # This is the bill payer 
 
 
-
