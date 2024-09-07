@@ -2,7 +2,8 @@
 
 #This program automatically prints the solutions to a FizzBuzz Game
 #The rules are as follows:
-#For each number from 1 to 100, print "Fizz" if the number is divisible by 3, "Buzz" if the number is divisible by 5, and "FizzBuzz" if the number is divisible by both 3 and 5. If the number is not divisible by 3 or 5, print the number itself.
+#For each number from 1 to 100, print "Fizz" if the number is divisible by 3, "Buzz" if the number is divisible by 5, 
+# and "FizzBuzz" if the number is divisible by both 3 and 5. If the number is not divisible by 3 or 5, print the number itself.
 
 #Loop through numbers 1 to 100
 for num in range(1, 101):
@@ -20,4 +21,3 @@ for num in range(1, 101):
         print(num)
 
 
-#carry on from tomorrow
