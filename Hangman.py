@@ -1,9 +1,6 @@
-# This game is called Hangman
-# It is a game where the player has to guess a word by guessing one letter at a time
-# The player has a limited number of guesses before they lose
-# The game ends when the player guesses all the letters in the word or runs out of guesses
 import random
 
+# Hangman stages
 hangman = [
     '''
   +---+
@@ -60,84 +57,62 @@ hangman = [
  /|\  |
  / \  |
       |
-=========''' ]
+========='''
+]
 
+# Function to play the game
+def play_hangman():
+    print("Welcome to Hangman!")
 
+    word_list = ["aardvark", "baboon", "camel"]
+    chosen_word = random.choice(word_list)
+    word_length = len(chosen_word)
+    lifes = 0
+    display = ['_'] * word_length  # Create a display list with underscores
+    guessed_letters = []  # List to track guessed letters
 
-print("Welcome to Hangman!")
+    print("Word to guess:")
+    print(f"{' '.join(display)}")  # Show initial underscores
 
+    while '_' in display and lifes < len(hangman) - 1:  # Loop until word is guessed or lives run out
+        guess = input("Guess a letter: ").lower()
 
+        # Check if the letter has already been guessed
+        if guess in guessed_letters:
+            print(f"You've already guessed '{guess}'. Try again.")
+            continue
 
-word_list = ["aardvark", "baboon", "camel"]
+        guessed_letters.append(guess)
 
-chosen_word = random.choice(word_list)
-word_length = len(chosen_word) 
-lifes = 0
-display = []
-for _ in range(word_length):
- display += "_"
-print("Word to guess:")
-print(f"{' '.join(display)}") 
+        # If the guessed letter is not in the word
+        if guess not in chosen_word:
+            print(f"Letter '{guess}' is not in the word.")
+            lifes += 1
+            print(hangman[lifes])  # Show the hangman stage
+        else:
+            # Reveal all occurrences of the guessed letter in the word
+            found = False
+            for i, ch in enumerate(chosen_word):
+                if ch == guess and display[i] == '_':  # Reveal all unrevealed occurrences
+                    display[i] = guess
+                    found = True
 
-display = ['_'] * len(chosen_word)  # Create a display list with underscores for each letter
-guessed_letters = []  # List to track all guessed letters
+            if found:
+                print(f"{' '.join(display)}")  # Show the updated display
+            else:
+                print(f"All occurrences of '{guess}' have already been revealed.")
 
-while '_' in display:  # Continue until the word is fully guessed
-    guess = input("Guess a letter: ").lower()  # Prompt the user for a letter
-
-    if guess not in chosen_word:  # If the letter is not in the word
-        print(f"Letter '{guess}' is not in the word.")
-        lifes += 1
-        hangman[lifes]
-        print(hangman[lifes])
-            
-    
-    guessed_letters.append(guess)  # Add the guess to the list of guessed letters
-
-    # Find the first occurrence of the guessed letter that hasn't been revealed
-    found = False
-    for i, ch in enumerate(chosen_word):
-        if ch == guess and display[i] == '_':  # Reveal one unrevealed occurrence
-            display[i] = guess
-            found = True
-            break  # Stop after revealing one occurrence
-
-    if found:
-        print(f"{' '.join(display)}")  # Print the updated display
+    # Check if the player won or lost
+    if '_' not in display:
+        print(f"Congratulations! You guessed the word: {chosen_word}, you win!")
     else:
-        print(f"You have already revealed all occurrences of '{guess}'.")
+        print("Game Over! You ran out of lives.")
+        print(f"The word was: {chosen_word}")
 
-print(f"Congratulations! You guessed the word: {chosen_word}, you win!")
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-        
-
-
-            
-
-
-
+# Main loop to allow retry
+while True:
+    play_hangman()
+    retry = input("Do you want to play again? (yes/no): ").lower()
+    if retry != 'yes':
+        print("Thanks for playing!")
+        break
