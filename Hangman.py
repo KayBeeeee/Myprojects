@@ -78,7 +78,7 @@ display = []
 for _ in range(word_length):
  display += "_"
 print("Word to guess:")
-print(f"{' '.join(display)}")
+print(f"{' '.join(display)}") 
 
 display = ['_'] * len(chosen_word)  # Create a display list with underscores for each letter
 guessed_letters = []  # List to track all guessed letters
