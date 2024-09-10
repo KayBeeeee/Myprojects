@@ -72,7 +72,6 @@ word_list = ["aardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word) 
-end_of_game = False
 lifes = 0
 display = []
 for _ in range(word_length):
@@ -91,9 +90,7 @@ while '_' in display:  # Continue until the word is fully guessed
         lifes += 1
         hangman[lifes]
         print(hangman[lifes])
-
-
-        continue        #TODO: review code until line 96 first before I continue
+            
     
     guessed_letters.append(guess)  # Add the guess to the list of guessed letters
 
@@ -110,7 +107,7 @@ while '_' in display:  # Continue until the word is fully guessed
     else:
         print(f"You have already revealed all occurrences of '{guess}'.")
 
-print(f"Congratulations! You guessed the word: {chosen_word}")
+print(f"Congratulations! You guessed the word: {chosen_word}, you win!")
 
 
 
@@ -136,38 +133,7 @@ print(f"Congratulations! You guessed the word: {chosen_word}")
 
 
 
-    #     lives -= 1
-    #     print(hangman[6 - lives])
-    #     print(f"{' '.join(display)}")
-    #     if lives == 0:
-    #         end_of_game = True
-    #         print("You lose.")
-    #         print(f"The word was {chosen_word}")
-    #         break
-    #     continue
-    # for position in range(word_length):
-    #     letter = chosen_word[position]
-    #     if letter == guess:
-    #         display[position] = letter
-    #         print(hangman[6 - lives])
-    #         print(f"{' '.join(display)}")
-    #         if "_" not in display:
-    #             end_of_game = True
-    #             print("You win!")
-    #             break
-    #         break
-    #     elif position == word_length - 1:
-    #         lives -= 1
-    #         print(hangman[6 - lives])
-    #         print(f"{' '.join(display)}")
-    #         if lives == 0:
-    #             end_of_game = True
-    #             print("You lose.")
-    #             print(f"The word was {chosen_word}")
-    #             break
-    #         break
-    #     else:
-    #         continue
+ 
         
 
 
