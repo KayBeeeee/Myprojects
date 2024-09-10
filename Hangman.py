@@ -77,7 +77,6 @@ lifes = 0
 display = []
 for _ in range(word_length):
  display += "_"
-#print(hangman[6 - lives])
 print("Word to guess:")
 print(f"{' '.join(display)}")
 
