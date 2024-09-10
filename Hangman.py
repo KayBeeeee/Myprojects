@@ -93,7 +93,7 @@ while '_' in display:  # Continue until the word is fully guessed
         print(hangman[lifes])
 
 
-        continue
+        continue        #TODO: review code until line 96 first before I continue
     
     guessed_letters.append(guess)  # Add the guess to the list of guessed letters
 
