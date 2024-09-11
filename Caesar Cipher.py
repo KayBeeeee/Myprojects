@@ -49,3 +49,4 @@ elif direction == "decode":
     print(f"The decoded text is {decoded_text}")
 else:
     print("Invalid input. Please try again.")
+
