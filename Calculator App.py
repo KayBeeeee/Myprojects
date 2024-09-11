@@ -1,4 +1,5 @@
-# calculator program: This program is a simple calculator that performs basic arithmetic operations
+# calculator program: This program is a simple 
+# calculator that performs basic arithmetic operations
 
 
 def calculator(num1, num2, operation):
