@@ -50,3 +50,5 @@ elif direction == "decode":
 else:
     print("Invalid input. Please try again.")
 
+    
+
