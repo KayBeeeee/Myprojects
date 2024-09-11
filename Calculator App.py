@@ -23,11 +23,14 @@ num2 = float(input("Enter the second number: "))
 operation = input("Enter the operation (+, -, *, /): ")
 result = calculator(num1, num2, operation)
 print("Result:", result)
-#continue with result or start calculator app again: This section allows the user to either continue with the result of the previous calculation or start a new calculation
+#continue with result or start calculator app again: This section allows the user to 
+# either continue with the result of the previous calculation or start a new calculation
 while True:
     choice = input("Do you want to continue with the result or start a new calculation? (y/n): ")
     if choice == 'y':
         operation = input("Enter the operation (+, -, *, /): ")
+        #rest num2: This line prompts the user to enter the second number again
+        num2 = float(input("Enter the second number: "))
         result = calculator(result, num2, operation)
         print("Result:", result)
     elif choice == 'n':
@@ -37,5 +40,6 @@ while True:
         result = calculator(num1, num2, operation)
         print("Result:", result)
     else:
-        print("Invalid choice. Please try again.")
+        print("Invalid choice. Please try again or type 'e' to exit.")
+        
 
