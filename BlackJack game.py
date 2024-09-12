@@ -38,17 +38,17 @@ def compare(user_score, computer_score):
     if user_score == computer_score:
         return "Draw" # Draw
     elif computer_score == 0:
-        return "Lose, opponent has BlackJack" # Lose, opponent has BlackJack    
+        return "Lose, opponent has BlackJack"  
     elif user_score == 0:
-        return "Win with a BlackJack" # Win with a BlackJack 
+        return "Win with a BlackJack" 
     elif user_score > 21:
-        return "You went over. You lose" # You went over. You lose 
+        return "You went over. You lose" 
     elif computer_score > 21:
-        return "Opponent went over. You win" # Opponent went over. You win 
+        return "Opponent went over. You win"  
     elif user_score > computer_score:
-        return "You win" # You win  
+        return "You win" 
     else:
-        return "You lose" # You lose 
+        return "You lose" 
 
 
 def play_game():
