@@ -46,7 +46,7 @@ def compare(user_score, computer_score):
     elif computer_score > 21:
         return "Opponent went over. You win" # Opponent went over. You win 
     elif user_score > computer_score:
-        return "You win" # You win 
+        return "You win" # You win  
     else:
         return "You lose" # You lose 
 
@@ -88,7 +88,7 @@ while input("Do you want to play a game of BlackJack? Type 'y' or 'n': ") == "y"
     play_game() # Play the game
     print("\n") # Print a blank line for better readability
     print("Thank you for playing BlackJack!") # Print a thank you message
-    
+
 
 
 
