@@ -22,7 +22,7 @@ def build_tree(preorder, inorder):
 
     return root
 
-def preorder_traversal(root):
+def preorder_traversal(root): 
     if root:
         print(root.data, end=" ")
         preorder_traversal(root.left)
