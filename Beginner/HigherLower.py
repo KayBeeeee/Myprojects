@@ -23,9 +23,9 @@ def higherlower():
         print("Correct!")
         score += 1
     else:
-        print(f"Incorrect! The number was {number}. Your final score is {score}.")
+        print(f"Incorrect! The number was {next_number}. Your final score is {score}.")
         return
     number = next_number
     higherlower()
 
-higherlower() 
+higherlower()  
