@@ -79,7 +79,7 @@ def checkIngredients(coffee):
         print("Invalid input.")
 
 #update ingredients after each coffee
-def updateingredients(coffee):
+def updateingredients(coffee): 
 
     global resources
 
