@@ -1,5 +1,11 @@
 import json
 
+#This program simulates a coffee machine that can make espresso, latte, and cappuccino.
+#It uses a JSON file to store the resources and update them as the program runs.
+#The program also allows the user to add resources manually.
+
+
+
 # File to store resources
 RESOURCE_FILE = "resources.json"
 
