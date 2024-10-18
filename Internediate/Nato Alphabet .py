@@ -1,1 +1,0 @@
-#The Nato Alphabet Translator
