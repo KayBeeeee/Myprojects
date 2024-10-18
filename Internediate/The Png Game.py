@@ -13,7 +13,7 @@ left_paddle = turtle.Turtle()
 left_paddle.speed(0)
 left_paddle.shape("square")
 left_paddle.color("white")
-left_paddle.shapesize(stretch_wid=5, stretch_len=1)
+left_paddle.shapesize(stretch_wid=5, stretch_len=1) 
 left_paddle.penup()
 left_paddle.goto(-350, 0)
 
