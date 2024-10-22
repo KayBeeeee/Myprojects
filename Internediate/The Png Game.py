@@ -82,7 +82,7 @@ while True:
         ball.sety(-290)
         ball.dy *= -1
     # Check for collisions with the left and right walls
-    if ball.xcor() > 390:
+    if ball.xcor() > 390: 
         ball.goto(0, 0)
         score_a += 1
         score.clear()
