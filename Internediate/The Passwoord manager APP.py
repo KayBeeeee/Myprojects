@@ -21,7 +21,7 @@ def add_password():
     else:
         messagebox.showerror("Error", "Please fill in all fields!")
 
-def get_password():
+def get_password(): 
     """
     Retrieve a password from the passwords dictionary
     """
