@@ -12,7 +12,9 @@ web_page = response.text
 soup = BeautifulSoup(web_page, "html.parser")
 song_names = soup.find_all(name="h3", id="title-of-a-story", class_="a-no-trucate") 
 song_list = [song.getText().strip() for song in song_names]
-print(song_list)
+print(song_list) 
+
+
 
 
 
