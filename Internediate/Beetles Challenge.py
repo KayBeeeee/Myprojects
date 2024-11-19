@@ -2,6 +2,8 @@ import json
 import math
 import sys
 
+
+
 def simulate_beetle_population(data):
     """
     Simulates the beetle population dynamics over time based on rainfall events and carrying capacity.
